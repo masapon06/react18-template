@@ -20,16 +20,15 @@ $ yarn run start
 
 ```mermaid
 sequenceDiagram
-participant tsl as tsloader
-participant tsc as tsc
-participant ts as TypeScript
-participant es6 as EcmaScript6
-participant es5 as EcmaScript5
-
-ts ->> tsl: webpackでトランスパイル
-tsl ->> tsc:
-tsc ->> es6: トランスパイル
-es6 ->> es5: コンパイル・バンドル
+    participant tsl as tsloader
+    participant tsc as tsc
+    participant ts as TypeScript
+    participant es6 as EcmaScript6
+    participant es5 as EcmaScript5
+    ts ->> tsl: loader
+    tsl ->> tsc: loader経由でtsc実行
+    tsc ->> es6: トランスパイル
+    es6 ->> es5: コンパイル・バンドル
 ```
 
 ## 参考
