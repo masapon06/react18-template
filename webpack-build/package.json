@@ -8,7 +8,7 @@
     "dev": "webpack serve",
     "watch": "webpack -w",
     "lint-fix": "eslint --fix './src/**/*.{js,ts,jsx,tsx}' && prettier --write './src/**/*.{js,ts,jsx,tsx}'",
-    "prepare": "husky install"
+    "prepare": "cd .. && husky install webpack-build/.husky"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.21.0",

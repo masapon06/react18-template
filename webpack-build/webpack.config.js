@@ -6,6 +6,7 @@ module.exports = {
   output: {
     path: `${__dirname}/dist`,
     filename: 'index.js',
+    chunkFilename: '[id].js',
   },
   module: {
     rules: [
