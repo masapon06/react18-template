@@ -3,7 +3,6 @@ import React from 'react'
 export const Components = () => {
   const [component, useComponent] = React.useState<any>(<div>not load</div>)
 
-  // TODO: どうやらきちんとchunk splitされてないので直す。
   const loadComponent = async () => {
     const { default: loadElement } = await import(
       /* webpackChunkName: "LazyLoadComponent" */ './LazyLoadComponent'
